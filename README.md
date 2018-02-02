@@ -79,4 +79,4 @@ If you really want to use it as a library, though, open up an issue and I'll pus
 
 Copyright © 2018 Eero Helenius
 
-Distributed under the Eclipse Public License either version 1.0 o (at your option) any later version.
+Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
