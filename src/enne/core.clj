@@ -44,7 +44,7 @@
 
 
 (defn male-names
-  "Generate an infinite sequence (or `n` if given) male names.
+  "Generate an infinite sequence of (or `n` if given) male names.
 
   Returns a list where the first item is the last name and the rest are first names.
 
