@@ -5,9 +5,12 @@
             [enne.core :as enne]))
 
 
-;; What a tremendous test, man.
+(def name? (every-pred seq? #(<= 2 (count %) 4) (partial every? string?)))
+
+
 (defspec generates-n-names
   100
-  (prop/for-all [n gen/pos-int]
-                (let [names (enne/female-names n)]
-                  (and (= (count names) n) (every? seq? names)))))
+  (prop/for-all
+    [n gen/pos-int]
+    (let [names (enne/female-names n)]
+      (and (= (count names) n) (every? name? names)))))
