@@ -12,20 +12,6 @@ Do you also like parentheses and etymology?
 
 You're in luck.
 
-```clojure
-(use 'enne.core)
-
-(shuffle (interleave (female-names 100) (male-names 100)))
-;;=>
-;;(("Alopaeus" "Jirka" "Bernt" "Muse")
-;; ("Fall" "Kati-Maria" "Elsiina")
-;; ("Vanhatalo" "Josefin" "Suvituuli" "Oosa")
-;; ("Sulin" "Hayat" "Ulla-Riitta" "Sointu")
-;; ("Aladin" "Anne-Elina" "Elli-Maria" "Liia")
-;; ;; etc.
-;; )
-```
-
 ## Examples
 
 ```clojure
