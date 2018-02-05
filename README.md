@@ -1,4 +1,8 @@
-# Enne
+Enne
+====
+
+[![Clojars Project](https://img.shields.io/clojars/v/me.flowthing/enne.svg)](https://clojars.org/me.flowthing/enne)
+[![CircleCI](https://circleci.com/gh/eerohele/enne.svg?style=svg)](https://circleci.com/gh/eerohele/enne)
 
 Do you need to come up with totally realistic names for the scores of Finnish
 characters in your upcoming speculative fiction novel set in dystopic
@@ -21,12 +25,6 @@ You're in luck.
 ;; ;; etc.
 ;; )
 ```
-
-## Installation
-
-Seriously? Just clone this repo, fire up a REPL, and generate some names.
-
-If you really want to use it as a library, though, open up an issue and I'll push it into Clojars.
 
 ## Examples
 
