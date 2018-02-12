@@ -13,4 +13,6 @@
 
   :profiles {:uberjar {:aot :all}
              :dev {:dependencies [[com.taoensso/tufte "1.1.2"]
-                                  [org.clojure/test.check "0.10.0-alpha2"]]}})
+                                  [org.clojure/test.check "0.10.0-alpha2"]]}}
+
+  :resource-paths ["resources"])

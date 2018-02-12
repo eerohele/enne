@@ -15,8 +15,8 @@
 
 
 (def ^:private data
-  {:first-names (-> "resources/first-names.edn" load-edn delay)
-   :last-names  (-> "resources/last-names.edn" load-edn delay)})
+  {:first-names (-> "first-names.edn" io/resource load-edn delay)
+   :last-names  (-> "last-names.edn" io/resource load-edn delay)})
 
 
 (def names
@@ -57,9 +57,9 @@
   ([output-file input-url]
    (spit output-file (load input-url)))
   ([]
-   (let [{:keys [last-names first-names]} (load-edn "resources/source.edn")]
-     (retrieve! "resources/last-names.edn" last-names)
-     (retrieve! "resources/first-names.edn" first-names))))
+   (let [{:keys [last-names first-names]} (load-edn "source.edn")]
+     (retrieve! "last-names.edn" last-names)
+     (retrieve! "first-names.edn" first-names))))
 
 (comment
   (retrieve!)
