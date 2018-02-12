@@ -12,7 +12,15 @@ Do you also like parentheses and etymology?
 
 You're in luck.
 
-## Examples
+## Use
+
+On the command line:
+
+```bash
+$ clj -Sdeps '{:deps {me.flowthing/enne {:mvn/version "0.1.1"}}}'
+```
+
+Then, in the REPL:
 
 ```clojure
 (use 'enne.core)
