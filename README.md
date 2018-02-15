@@ -14,7 +14,9 @@ You're in luck.
 
 ## Use
 
-On the command line:
+Install [Clojure CLI tools](https://clojure.org/guides/getting_started#_clojure_installer_and_cli_tools).
+
+Then, on the command line:
 
 ```bash
 $ clj -Sdeps '{:deps {me.flowthing/enne {:mvn/version "0.1.1"}}}'
