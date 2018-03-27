@@ -37,7 +37,7 @@
             (let [rows  (->> (spreadsheet/row-seq sheet) (remove nil?) rest)
                   cells (map spreadsheet/cell-seq rows)]
               (assoc acc (spreadsheet/sheet-name sheet)
-                         (map first (map (partial map spreadsheet/read-cell) cells)))))
+                         (mapv first (map (partial map spreadsheet/read-cell) cells)))))
           {}
           (spreadsheet/sheet-seq workbook)))
 
@@ -57,9 +57,9 @@
   ([output-file input-url]
    (spit output-file (load input-url)))
   ([]
-   (let [{:keys [last-names first-names]} (load-edn "source.edn")]
-     (retrieve! "last-names.edn" last-names)
-     (retrieve! "first-names.edn" first-names))))
+   (let [{:keys [last-names first-names]} (load-edn (io/resource "source.edn"))]
+     (retrieve! "resources/last-names.edn" last-names)
+     (retrieve! "resources/first-names.edn" first-names))))
 
 (comment
   (retrieve!)
