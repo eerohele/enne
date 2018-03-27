@@ -67,6 +67,20 @@ Then, in the REPL:
 ;; "Kantele, Santra Tyyne Marjukka"
 ;; "Brännback, Anu-Maaria Kerttuli"
 ;; "Kiira, Ave Inari Natacha")
+
+;; Single name
+(as-string (male-name))
+;;=> "Melin, Kivi Ewert"
+(as-string (female-name))
+;;=> "Berndtson, Nessi Marjaana"
+
+;; Last names, first names, middle names
+(last-name)
+;;=> "Harmokivi"
+(female-first-name)
+;;=> "Venera"
+(male-middle-name)
+;;=> "Pasinpoika"
 ```
 
 ## License
