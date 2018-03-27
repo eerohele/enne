@@ -21,6 +21,31 @@
     (second (first (drop-while #(< (key %) n) middle-name-odds)))))
 
 
+(defn last-name
+  []
+  (rand-nth (:last data/names)))
+
+
+(defn female-first-name
+  []
+  (rand-nth (:female/first data/names)))
+
+
+(defn female-middle-name
+  []
+  (rand-nth (:female/middle data/names)))
+
+
+(defn male-first-name
+  []
+  (rand-nth (:male/first data/names)))
+
+
+(defn male-middle-name
+  []
+  (rand-nth (:male/middle data/names)))
+
+
 (defn generate
   "Generate an infinite sequence of names."
   [last first middle]
