@@ -83,6 +83,12 @@
    (take n (male-names))))
 
 
+(defn as-string
+  "Turn a name into a string."
+  [[last-name & first-names]]
+  (str last-name ", " (string/join " " first-names)))
+
+
 (defn as-strings
   "Turn a list of names into strings.
 
@@ -91,6 +97,4 @@
     (strings (male-names 3))
     => (\"Aartola, Süleyman Altti Joonathan\" \"Sarajärvi, Mio Samu Erno\" \"Yömaa, Romeo Phuc Aabel\")"
   [names]
-  (map (fn [[last-name & first-names]]
-         (str last-name ", " (string/join " " first-names)))
-       names))
+  (map as-string names))
