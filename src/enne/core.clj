@@ -83,6 +83,16 @@
    (take n (male-names))))
 
 
+(defn male-name
+  []
+  (-> 1 male-names first))
+
+
+(defn female-name
+  []
+  (-> 1 female-names first))
+
+
 (defn as-string
   "Turn a name into a string."
   [[last-name & first-names]]
