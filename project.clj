@@ -1,4 +1,4 @@
-(defproject me.flowthing/enne "0.1.1"
+(defproject me.flowthing/enne "0.2.0"
   :description "Generate random Finnish names."
 
   :url "https://github.com/eerohele/enne"
