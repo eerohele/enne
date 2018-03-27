@@ -93,6 +93,11 @@
   (-> 1 female-names first))
 
 
+(defn rand-name
+  []
+  ((rand-nth [male-name female-name])))
+
+
 (defn as-string
   "Turn a name into a string."
   [[last-name & first-names]]

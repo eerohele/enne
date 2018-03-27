@@ -74,6 +74,9 @@ Then, in the REPL:
 (as-string (female-name))
 ;;=> "Berndtson, Nessi Marjaana"
 
+;; Don't care about sex
+(as-string (rand-name))
+
 ;; Last names, first names, middle names
 (last-name)
 ;;=> "Harmokivi"
