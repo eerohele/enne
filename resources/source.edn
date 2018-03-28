@@ -1,2 +1,3 @@
 {:last-names "https://www.avoindata.fi/data/dataset/57282ad6-3ab1-48fb-983a-8aba5ff8d29a/resource/d25831d1-82a9-476f-8f7c-374c348efc14/download/sukunimitilasto-2018-03-05-vrk.xlsx"
- :first-names "https://www.avoindata.fi/data/dataset/57282ad6-3ab1-48fb-983a-8aba5ff8d29a/resource/d35f8973-53da-4b66-8a49-bc2fee1a2996/download/etunimitilasto-2018-03-05-vrk.xlsx"}
+ :first-names "https://www.avoindata.fi/data/dataset/57282ad6-3ab1-48fb-983a-8aba5ff8d29a/resource/d35f8973-53da-4b66-8a49-bc2fee1a2996/download/etunimitilasto-2018-03-05-vrk.xlsx"
+ :municipalities "https://www.avoindata.fi/data/dataset/7307868e-54d0-4f0b-90b0-d0126ad8586d/resource/b1cb9870-191f-4616-9c53-5388b7ca6beb/download/kuntaluettelo-laajat-tiedot-2018-01-01.csv"}

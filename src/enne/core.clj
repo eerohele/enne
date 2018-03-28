@@ -113,3 +113,8 @@
     => (\"Aartola, Süleyman Altti Joonathan\" \"Sarajärvi, Mio Samu Erno\" \"Yömaa, Romeo Phuc Aabel\")"
   [names]
   (map as-string names))
+
+
+(defn municipality
+  []
+  (rand-nth data/municipalities))

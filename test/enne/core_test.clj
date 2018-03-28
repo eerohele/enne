@@ -14,6 +14,7 @@
 (def female-middle-names (-> data/names :female/middle set))
 (def male-first-names (-> data/names :male/first set))
 (def male-middle-names (-> data/names :male/middle set))
+(def municipalities (set data/municipalities))
 
 
 (defspec generates-n-names
@@ -33,3 +34,10 @@
     (contains? female-middle-names (enne/female-middle-name))
     (contains? male-first-names (enne/male-first-name))
     (contains? male-middle-names (enne/male-middle-name))))
+
+
+(defspec municipality
+  100
+  (prop/for-all
+    [_ gen/pos-int]
+    (contains? municipalities (enne/municipality))))

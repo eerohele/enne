@@ -19,7 +19,7 @@ Install [Clojure CLI tools](https://clojure.org/guides/getting_started#_clojure_
 Then, on the command line:
 
 ```bash
-$ clj -Sdeps '{:deps {me.flowthing/enne {:mvn/version "0.2.0"}}}'
+$ clj -Sdeps '{:deps {me.flowthing/enne {:mvn/version "0.3.0"}}}'
 ```
 
 Then, in the REPL:
@@ -76,6 +76,7 @@ Then, in the REPL:
 
 ;; Don't care about sex
 (as-string (rand-name))
+;;=> "Viitalähde, Sten Magnusson"
 
 ;; Last names, first names, middle names
 (last-name)
@@ -84,6 +85,10 @@ Then, in the REPL:
 ;;=> "Venera"
 (male-middle-name)
 ;;=> "Pasinpoika"
+
+;; A Finnish municipality (code and name)
+(municipality)
+;;=> ["560" "Orimattila"]
 ```
 
 ## License

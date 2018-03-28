@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
+## 0.3.0 - 2018-03-28
+- Add support for municipalities via `(municipality)`
+
 ## 0.2.0 - 2018-03-27
 - Update name data from avoindata.fi
 - Expand API to make it easier to generate individual names or name parts:

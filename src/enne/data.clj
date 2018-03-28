@@ -1,6 +1,7 @@
 (ns enne.data
   (:require [clojure.java.io :as io]
             [clojure.edn :as edn]
+            [clojure.data.csv :as csv]
             [dk.ative.docjure.spreadsheet :as spreadsheet])
 
   (:refer-clojure :exclude [load])
@@ -15,19 +16,24 @@
 
 
 (def ^:private data
-  {:first-names (-> "first-names.edn" io/resource load-edn delay)
-   :last-names  (-> "last-names.edn" io/resource load-edn delay)})
+  {:first-names    (-> "first-names.edn" io/resource load-edn)
+   :last-names     (-> "last-names.edn" io/resource load-edn)
+   :municipalities (-> "municipalities.edn" io/resource load-edn)})
 
 
 (def names
   (let [{:keys [last-names first-names]} data]
-    {:last          (get @last-names "Nimet")
+    {:last          (get last-names "Nimet")
 
-     :female/first  (get @first-names "Naiset ens")
-     :female/middle (get @first-names "Naiset muut")
+     :female/first  (get first-names "Naiset ens")
+     :female/middle (get first-names "Naiset muut")
 
-     :male/first    (get @first-names "Miehet ens")
-     :male/middle   (get @first-names "Miehet muut")}))
+     :male/first    (get first-names "Miehet ens")
+     :male/middle   (get first-names "Miehet muut")}))
+
+
+(def municipalities
+  (:municipalities data))
 
 
 (defn- spreadsheet->edn
@@ -42,7 +48,7 @@
           (spreadsheet/sheet-seq workbook)))
 
 
-(defn- load
+(defn- load-names-from-spreadsheet
   [url]
   (-> url
       io/input-stream
@@ -52,14 +58,21 @@
       pr-str))
 
 
+(defn- load-municipalities-from-csv
+  [url]
+  (let [data (with-open [reader (io/reader (io/as-url url))]
+               (doall
+                 (csv/read-csv reader :separator \;)))]
+    (-> (mapv (comp vec (partial take 2)) (rest data)) vec pr-str)))
+
+
 (defn retrieve!
   "Retrieve name data from the Finnish open data service and save it into EDN files."
-  ([output-file input-url]
-   (spit output-file (load input-url)))
-  ([]
-   (let [{:keys [last-names first-names]} (load-edn (io/resource "source.edn"))]
-     (retrieve! "resources/last-names.edn" last-names)
-     (retrieve! "resources/first-names.edn" first-names))))
+  []
+  (let [{:keys [last-names first-names municipalities]} (load-edn (io/resource "source.edn"))]
+    (spit "resources/last-names.edn" (load-names-from-spreadsheet last-names))
+    (spit "resources/first-names.edn" (load-names-from-spreadsheet first-names))
+    (spit "resources/municipalities.edn" (load-municipalities-from-csv municipalities))))
 
 (comment
   (retrieve!)
