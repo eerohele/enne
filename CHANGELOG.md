@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
+# 0.4.0 - 2018-04-28
+- Add ClojureScript support
+- Add test.check generators
+- Add specs
+
 ## 0.3.0 - 2018-03-28
 - Add support for municipalities via `(municipality)`
 

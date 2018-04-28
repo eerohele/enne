@@ -12,14 +12,14 @@ Do you also like parentheses and etymology?
 
 You're in luck.
 
-## Use
+## Try
 
 Install [Clojure CLI tools](https://clojure.org/guides/getting_started#_clojure_installer_and_cli_tools).
 
 Then, on the command line:
 
 ```bash
-$ clj -Sdeps '{:deps {me.flowthing/enne {:mvn/version "0.3.0"}}}'
+$ clj -Sdeps '{:deps {me.flowthing/enne {:mvn/version "0.4.0"}}}'
 ```
 
 Then, in the REPL:
@@ -89,6 +89,26 @@ Then, in the REPL:
 ;; A Finnish municipality (code and name)
 (municipality)
 ;;=> ["560" "Orimattila"]
+```
+
+## Generators and specs
+
+
+```clojure
+(require '[clojure.test.check.generators :refer [generate]]
+         '[enne.gen :as gen])
+
+(generate gen/rand-name)
+;;=> "Alalääkkölä, Runar Carl-Henrik"
+
+(require '[clojure.spec.alpha :as spec]
+         '[enne.specs :as names])
+
+(spec/def ::person
+    (spec/keys :req [::names/last-name ::names/first-names]))
+
+(first (spec/exercise ::person 1))
+;;=>{:last-name "Kolli", :first-names "Osama Joosef Rickhard"}
 ```
 
 ## License
