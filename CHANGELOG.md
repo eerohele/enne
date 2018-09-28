@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
+# 0.4.1 - 2018-09-28
+- Fix ClojureScript compatibility issue in enne.gen
+
 # 0.4.0 - 2018-04-28
 - Add ClojureScript support
 - Add test.check generators
