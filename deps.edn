@@ -1,0 +1,16 @@
+{:aliases   {:dev    {:extra-deps {com.taoensso/tufte {:mvn/version "1.1.2"}}}
+             :runner {:extra-deps {com.cognitect/test-runner {:git/url "https://github.com/cognitect-labs/test-runner"
+                                                              :sha     "76568540e7f40268ad2b646110f237a60295fa3c"}}
+                      :main-opts  ["-m" "cognitect.test-runner" "-d" "test"]}
+             :test   {:extra-deps  {org.clojure/test.check {:mvn/version "RELEASE"}}
+                      :extra-paths ["test"]}}
+
+ :deps      {dk.ative/docjure          {:mvn/version "1.12.0"}
+             org.clojure/clojure       {:mvn/version "1.9.0"}
+             org.clojure/clojurescript {:mvn/version "1.10.238"}
+             org.clojure/data.csv      {:mvn/version "0.1.4"}
+             org.clojure/test.check    {:mvn/version "0.10.0-alpha3"}}
+
+ :mvn/repos {"releases" {:url "https://repo.clojars.org"}}
+
+ :paths     ["src" "resources"]}
