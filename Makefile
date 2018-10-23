@@ -1,4 +1,4 @@
-.PHONY: test pom deploy
+.PHONY: test deploy
 
 test:
 	@clj -Atest
@@ -6,5 +6,5 @@ test:
 pom: pom.xml
 	@clj -Spom
 
-deploy: test, pom
+deploy: test
 	@mvn deploy
