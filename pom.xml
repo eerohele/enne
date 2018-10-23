@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>me.flowthing</groupId>
   <artifactId>enne</artifactId>
-  <version>0.4.1</version>
+  <version>0.4.2</version>
   <name>enne</name>
 
   <dependencies>
@@ -30,7 +31,7 @@
     <dependency>
       <groupId>org.clojure</groupId>
       <artifactId>test.check</artifactId>
-      <version>0.10.0-alpha2</version>
+      <version>0.10.0-alpha3</version>
     </dependency>
   </dependencies>
 
@@ -62,6 +63,10 @@
     <repository>
       <id>clojars</id>
       <url>https://repo.clojars.org/</url>
+    </repository>
+    <repository>
+      <id>releases</id>
+      <url>https://repo.clojars.org</url>
     </repository>
   </repositories>
 

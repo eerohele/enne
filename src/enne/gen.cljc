@@ -3,7 +3,7 @@
             [clojure.test.check.generators :as gen]
             [enne.core :refer [as-string]]
             [enne.data :as data])
-  (:require-macros [clojure.test.check.generators :as gen]))
+  #?(:cljs (:require-macros [clojure.test.check.generators :as gen])))
 
 
 (def last-name

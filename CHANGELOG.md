@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
+# 0.4.2 - 2018-10-23
+- Fix CLJC compatibility issue in enne.gen
+
 # 0.4.1 - 2018-09-28
 - Fix ClojureScript compatibility issue in enne.gen
 
