@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
+# 0.5.0 - 2018-11-14
+- Add generator and spec for municipality codes
+
 # 0.4.2 - 2018-10-23
 - Fix CLJC compatibility issue in enne.gen
 

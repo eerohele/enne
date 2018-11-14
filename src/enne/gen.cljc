@@ -68,6 +68,13 @@
 (def rand-name
   (gen/one-of [female-name male-name]))
 
+(def ^:private municipality-codes
+  (mapv first data/municipalities))
+
+
+(def municipality
+  (gen/elements municipality-codes))
+
 
 (def ^:private municipality-names
   (mapv second data/municipalities))
@@ -93,4 +100,6 @@
   (gen/sample first-names)
   (gen/sample rand-name)
 
-  (gen/sample municipality-name))
+  (gen/sample municipality)
+  (gen/sample municipality-name)
+  )

@@ -47,6 +47,10 @@
   (spec/with-gen string? (constantly gen/rand-name)))
 
 
+(spec/def ::municipality
+  (spec/with-gen string? (constantly gen/municipality)))
+
+
 (spec/def ::municipality-name
   (spec/with-gen string? (constantly gen/municipality-name)))
 
@@ -66,4 +70,6 @@
 
   (spec/exercise ::first-names)
   (spec/exercise ::rand-name)
-  (spec/exercise ::municipality-name))
+  (spec/exercise ::municipality)
+  (spec/exercise ::municipality-name)
+  )
