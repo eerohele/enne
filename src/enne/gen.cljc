@@ -92,11 +92,19 @@
         :else \A))
 
 
-(defn- day-of-month
-  [month]
-  (cond (= month 2) (gen/choose 28 29)
-        (some #{1 3 5 7 8 10 12} #{month}) (gen/return 31)
-        :else (gen/return 30)))
+(defn- leap-year?
+  [year]
+  (cond (not (zero? (mod year 4))) false
+        (not (zero? (mod year 100))) true
+        (zero? (mod year 400)) true
+        :else false))
+
+
+(defn- last-day-of-month
+  [year month]
+  (cond (= month 2) (if (leap-year? year) 29 28)
+        (some #{1 3 5 7 8 10 12} #{month}) 31
+        :else 30))
 
 
 (defn- parse-int
@@ -127,11 +135,11 @@
 (def personal-identity-code
   (gen/let [year              (gen/choose 1800 2018)
             month             (gen/choose 1 12)
-            day               (day-of-month month)
+            day               (gen/choose 1 (last-day-of-month year month))
             individual-number (gen/choose 2 899)]
-    (let [date-of-birth (str (zero-pad 1 day)
+    (let [date-of-birth (str (zero-pad 2 day)
                              (zero-pad 2 month)
-                             (zero-pad 1 (subs (str year) 2)))]
+                             (subs (str year) 2))]
       (str date-of-birth
            (century-code year)
            (zero-pad 3 individual-number)

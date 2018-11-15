@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
+# 0.6.1 - 2018-11-15
+- Fix day of month generation for PICs
+
 # 0.6.0 - 2018-11-15
 - Add support for generating Finnish Personal Identity Codes (HETU)
 
