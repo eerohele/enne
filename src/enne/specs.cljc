@@ -55,6 +55,11 @@
   (spec/with-gen string? (constantly gen/municipality-name)))
 
 
+(spec/def ::personal-identity-code
+  (spec/with-gen (spec/and string? #(= (count %) 11))
+                 (constantly gen/personal-identity-code)))
+
+
 (comment
   (spec/exercise ::last-name)
 
@@ -72,4 +77,5 @@
   (spec/exercise ::rand-name)
   (spec/exercise ::municipality)
   (spec/exercise ::municipality-name)
+  (spec/exercise ::personal-identity-code)
   )

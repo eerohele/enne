@@ -93,7 +93,6 @@ Then, in the REPL:
 
 ## Generators and specs
 
-
 ```clojure
 (require '[clojure.test.check.generators :refer [generate]]
          '[enne.gen :as gen])
@@ -109,6 +108,9 @@ Then, in the REPL:
 
 (first (spec/exercise ::person 1))
 ;;=>{:last-name "Kolli", :first-names "Osama Joosef Rickhard"}
+
+(generate gen/personal-identity-code)
+;;=> "300994-644M"
 ```
 
 ## License

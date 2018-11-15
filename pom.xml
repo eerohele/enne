@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>me.flowthing</groupId>
   <artifactId>enne</artifactId>
-  <version>0.5.0</version>
+  <version>0.6.0</version>
   <name>enne</name>
 
   <dependencies>
