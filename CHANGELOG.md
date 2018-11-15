@@ -1,22 +1,22 @@
 # Change Log
 All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
-# 0.6.1 - 2018-11-15
+## 0.6.1 - 2018-11-15
 - Fix day of month generation for PICs
 
-# 0.6.0 - 2018-11-15
+## 0.6.0 - 2018-11-15
 - Add support for generating Finnish Personal Identity Codes (HETU)
 
-# 0.5.0 - 2018-11-14
+## 0.5.0 - 2018-11-14
 - Add generator and spec for municipality codes
 
-# 0.4.2 - 2018-10-23
+## 0.4.2 - 2018-10-23
 - Fix CLJC compatibility issue in enne.gen
 
-# 0.4.1 - 2018-09-28
+## 0.4.1 - 2018-09-28
 - Fix ClojureScript compatibility issue in enne.gen
 
-# 0.4.0 - 2018-04-28
+## 0.4.0 - 2018-04-28
 - Add ClojureScript support
 - Add test.check generators
 - Add specs
