@@ -104,7 +104,7 @@ Then, in the REPL:
          '[enne.specs :as names])
 
 (spec/def ::person
-    (spec/keys :req [::names/last-name ::names/first-names]))
+  (spec/keys :req [::names/last-name ::names/first-names]))
 
 (first (spec/exercise ::person 1))
 ;;=>{:last-name "Kolli", :first-names "Osama Joosef Rickhard"}
