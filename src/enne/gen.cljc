@@ -122,9 +122,8 @@
 
 
 (defn- control-character
-  [date-of-birth individual-number]
-  (get control-code-character-map
-       (rem (parse-int (str date-of-birth individual-number)) 31)))
+  [s]
+  (get control-code-character-map (rem (parse-int s) 31)))
 
 
 (defn- zero-pad
@@ -136,14 +135,14 @@
   (gen/let [year              (gen/choose 1800 2018)
             month             (gen/choose 1 12)
             day               (gen/choose 1 (last-day-of-month year month))
-            individual-number (gen/choose 2 899)]
+            individual-number (gen/fmap (partial zero-pad 3) (gen/choose 2 899))]
     (let [date-of-birth (str (zero-pad 2 day)
                              (zero-pad 2 month)
                              (subs (str year) 2))]
       (str date-of-birth
            (century-code year)
-           (zero-pad 3 individual-number)
-           (control-character date-of-birth individual-number)))))
+           individual-number
+           (control-character (str date-of-birth individual-number))))))
 
 
 (comment
