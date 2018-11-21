@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
+## 0.6.3 - 2018-11-21
+- Remove unnecessary dependencies
+
 ## 0.6.2 - 2018-11-16
 - Fix bug in PIC control character calculation
 
