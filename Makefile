@@ -3,8 +3,6 @@
 test:
 	@clj -Atest
 
-pom: pom.xml
+deploy: test
 	@clj -Spom
-
-deploy: test, pom
 	@mvn deploy
