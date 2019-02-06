@@ -6,5 +6,5 @@ test:
 pom: pom.xml
 	@clj -Spom
 
-deploy: test
+deploy: test, pom
 	@mvn deploy

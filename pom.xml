@@ -1,40 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
   <modelVersion>4.0.0</modelVersion>
   <groupId>me.flowthing</groupId>
   <artifactId>enne</artifactId>
-  <version>0.6.3</version>
+  <version>0.6.4</version>
   <name>enne</name>
-
-  <dependencies>
-    <dependency>
-      <groupId>org.clojure</groupId>
-      <artifactId>clojure</artifactId>
-      <version>1.9.0</version>
-    </dependency>
-    <dependency>
-      <groupId>dk.ative</groupId>
-      <artifactId>docjure</artifactId>
-      <version>1.12.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.clojure</groupId>
-      <artifactId>clojurescript</artifactId>
-      <version>1.10.238</version>
-    </dependency>
-    <dependency>
-      <groupId>org.clojure</groupId>
-      <artifactId>data.csv</artifactId>
-      <version>0.1.4</version>
-    </dependency>
-    <dependency>
-      <groupId>org.clojure</groupId>
-      <artifactId>test.check</artifactId>
-      <version>0.10.0-alpha3</version>
-    </dependency>
-  </dependencies>
-
   <build>
     <sourceDirectory>src</sourceDirectory>
     <resources>
@@ -58,7 +28,6 @@
       </plugin>
     </plugins>
   </build>
-
   <repositories>
     <repository>
       <id>clojars</id>
@@ -69,7 +38,6 @@
       <url>https://repo.clojars.org</url>
     </repository>
   </repositories>
-
   <distributionManagement>
     <repository>
       <id>clojars</id>
@@ -77,18 +45,22 @@
       <url>https://clojars.org/repo</url>
     </repository>
   </distributionManagement>
-
   <description>A Clojure(Script) library for generating random names and municipalities from data supplied by the Finnish open data service.</description>
   <url>https://cljdoc.xyz/d/me.flowthing/enne/CURRENT</url>
-
   <licenses>
     <license>
       <name>Eclipse Public License 1.0</name>
       <url>https://www.eclipse.org/legal/epl-v10.html</url>
     </license>
   </licenses>
-
   <scm>
     <url>https://github.com/eerohele/enne</url>
   </scm>
+  <dependencies>
+    <dependency>
+      <groupId>org.clojure</groupId>
+      <artifactId>clojure</artifactId>
+      <version>1.10.0</version>
+    </dependency>
+  </dependencies>
 </project>

@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
+## 0.6.4 - 2019-02-06
+- Remove unnecessary ClojureScript dependency
+
 ## 0.6.3 - 2018-11-21
 - Remove unnecessary dependencies
 
