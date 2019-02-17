@@ -60,6 +60,16 @@
                  (constantly gen/personal-identity-code)))
 
 
+(spec/def ::female-personal-identity-code
+  (spec/with-gen ::personal-identity-code
+                 (constantly gen/female-personal-identity-code)))
+
+
+(spec/def ::male-personal-identity-code
+  (spec/with-gen ::personal-identity-code
+                 (constantly gen/male-personal-identity-code)))
+
+
 (comment
   (spec/exercise ::last-name)
 
@@ -77,5 +87,8 @@
   (spec/exercise ::rand-name)
   (spec/exercise ::municipality)
   (spec/exercise ::municipality-name)
+
   (spec/exercise ::personal-identity-code)
+  (spec/exercise ::female-personal-identity-code)
+  (spec/exercise ::male-personal-identity-code)
   )
