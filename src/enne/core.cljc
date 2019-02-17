@@ -2,7 +2,7 @@
   "Generate random Finnish names from data supplied by the Finnish Population Register Centre.
 
   The data is extracted from Excel spreadsheets available at avoindata.fi. If new Excel spreadsheets are made available,
-  update the URLs in resource/source.edn and run (enne.data/retrieve!)"
+  update the URLs in resource/source.edn and run (enne.retriever/retrieve!)"
   (:require [clojure.string :as string]
             [enne.data :as data]))
 
