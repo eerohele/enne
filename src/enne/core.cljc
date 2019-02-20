@@ -94,8 +94,13 @@
 
 
 (defn rand-name
-  []
+  ([]
   ((rand-nth [male-name female-name])))
+  ([sex]
+   (case sex
+     :sex/female (female-name)
+     :sex/male (male-name)
+     (rand-name))))
 
 
 (defn as-string
