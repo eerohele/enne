@@ -1,7 +1,8 @@
 (ns enne.pic
   (:require [clojure.pprint :as pprint]
             [clojure.test.check.generators :as gen])
-  #?(:clj (:import (java.util Calendar))))
+  #?(:clj (:import (java.util Calendar)))
+  #?(:cljs (:require-macros [clojure.test.check.generators :as gen])))
 
 
 (defn- century-code
