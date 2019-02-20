@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Enne</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" type="text/css"/>
+        <style type="text/css">
+            .section {
+                padding: 1.5rem 1rem;
+            }
+
+            .footer {
+                background: transparent;
+            }
+
+            .footer p {
+                margin-top: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">Enne</h1>
+                    <h2 class="subtitle">Generate a random Finnish person.</h2>
+                </div>
+            </div>
+        </section>
+        <div id="app"></div>
+        <section class="footer">
+            <div class="container">
+                <p>The name and municipality are random-generated from data supplied by the <a href="https://avoindata.fi/">Finnish open data service</a>.</p>
+                <p>This website is gender-binary not by choice, but because Finnish personal identity codes remain gender-binary, as does the data in the Finnish open data service.</p>
+                <hr/>
+                <p><strong>Enne</strong> is a Clojure(Script) library for generating random Finnish names, municipalities, and personal identity codes. Check it out on <a href="https://github.com/eerohele/enne">GitHub</a>.</p>
+            </div>
+        </section>
+        <script src="js/main.js"></script>
+    </body>
+</html>

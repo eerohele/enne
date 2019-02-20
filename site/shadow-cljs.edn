@@ -1,0 +1,9 @@
+{:deps   {:aliases [:dev]}
+
+ :dev-http {12345 "../docs"}
+
+ :builds {:app {:target     :browser
+                :output-dir "../docs/js"
+                :asset-path "js"
+                :modules    {:main {:entries [enne.site.core]}}
+                :devtools   {:after-load enne.site.core/start}}}}

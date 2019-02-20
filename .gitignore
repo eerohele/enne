@@ -11,3 +11,5 @@ pom.xml.asc
 *.iml
 .idea/
 .cpcache/
+docs/js/cljs-runtime/
+docs/js/manifest.edn
