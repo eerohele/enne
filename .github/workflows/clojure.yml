@@ -1,0 +1,11 @@
+name: Clojure CI
+
+on: [push]
+
+jobs:
+  build:
+    name: Run tests
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: ./.github/actions

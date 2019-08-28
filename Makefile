@@ -1,7 +1,7 @@
 .PHONY: test deploy
 
 test:
-	@clj -Atest
+	@clj -A:test:test/clj
 
 deploy: test
 	@clj -Spom
