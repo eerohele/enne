@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
+## 1.0.0 - 2020-02-24
+- Use latest available name and municipality data
+- [1.0 all the things](https://insideclojure.org/2020/02/18/lib-version/)
+
 ## 0.6.4 - 2019-02-06
 - Remove unnecessary ClojureScript dependency
 
