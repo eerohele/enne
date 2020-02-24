@@ -1,7 +1,7 @@
-{:aliases {:dev {:extra-deps {org.clojure/clojurescript {:mvn/version "1.10.520"}
+{:aliases {:dev {:extra-deps {org.clojure/clojurescript {:mvn/version "1.10.597"}
                               org.clojure/test.check {:mvn/version "RELEASE"}}}}
 
  :deps    {me.flowthing/enne {:local/root "../"}
-           reagent           {:mvn/version "0.8.1"}}
+           reagent           {:mvn/version "0.9.1"}}
 
  :paths   ["src"]}

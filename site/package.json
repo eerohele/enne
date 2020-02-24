@@ -5,11 +5,11 @@
   "description": "A website for Enne, a library for generating random Finns.",
   "dependencies": {
     "create-react-class": "^15.6.3",
-    "react": "^16.8.2",
-    "react-dom": "^16.8.2"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   },
   "devDependencies": {
-    "shadow-cljs": "^2.7.36"
+    "shadow-cljs": "^2.8.84"
   },
   "author": "Eero Helenius",
   "license": "ISC"
