@@ -31,19 +31,49 @@
   [s]
   #?(:clj  (Integer/parseInt s)
      :cljs (let [int (js/parseInt s)]
-                (if (js/isNaN int) nil int))))
+             (if (js/isNaN int) nil int))))
 
 
-(def ^:private control-code-character-map
-  (into (zipmap (range) (range 10))
-        (zipmap (range 10 31)
-                (disj (into (sorted-set) (map char (range 65 90)))
-                      \G \I \O \Q \Z))))
+(def ^:private control-characters
+  {0  0
+   1  1
+   2  2
+   3  3
+   4  4
+   5  5
+   6  6
+   7  7
+   8  8
+   9  9
+   10 \A
+   11 \B
+   12 \C
+   13 \D
+   14 \E
+   15 \F
+   16 \H
+   17 \J
+   18 \K
+   19 \L
+   20 \M
+   21 \N
+   22 \P
+   23 \R
+   24 \S
+   25 \T
+   26 \U
+   27 \V
+   28 \W
+   29 \X
+   30 \Y})
 
 
 (defn- control-character
-  [s]
-  (get control-code-character-map (rem (parse-int s) 31)))
+  [date-of-birth individual-number]
+  (-> (str date-of-birth individual-number)
+      (parse-int)
+      (rem 31)
+      (control-characters)))
 
 
 (defn- zero-pad
@@ -81,9 +111,9 @@
     (gen/generate (generator :sex/any 1995 2015))
   "
   ([sex year-lower-bound year-upper-bound]
-   (gen/let [year              (gen/choose year-lower-bound year-upper-bound)
-             month             (gen/choose 1 12)
-             day               (gen/choose 1 (last-day-of-month year month))
+   (gen/let [year (gen/choose year-lower-bound year-upper-bound)
+             month (gen/choose 1 12)
+             day (gen/choose 1 (last-day-of-month year month))
              individual-number (gen/fmap (partial zero-pad 3) (individual-number-generator sex))]
      (let [date-of-birth (str (zero-pad 2 day)
                               (zero-pad 2 month)
@@ -91,7 +121,7 @@
        (str date-of-birth
             (century-code year)
             individual-number
-            (control-character (str date-of-birth individual-number))))))
+            (control-character date-of-birth individual-number)))))
   ([sex year-lower-bound]
    (generator sex year-lower-bound (current-year)))
   ([sex]
