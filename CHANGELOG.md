@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
+## 1.0.1 - 2020-06-02
+- Add leading zeroes to municipality codes
+
+  Officially, municipality codes always have three characters.
+
 ## 1.0.0 - 2020-02-24
 - Use latest available name and municipality data
 - [1.0 all the things](https://insideclojure.org/2020/02/18/lib-version/)
