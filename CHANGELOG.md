@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
+## 1.1.0 - 2021-09-30
+- Add `male-first-names` and `female-first-names`
+
 ## 1.0.1 - 2020-06-02
 - Add leading zeroes to municipality codes
 

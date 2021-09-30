@@ -46,11 +46,15 @@
   (rand-nth (:male/middle data/names)))
 
 
+(defn middle-names
+  [middle]
+  (take (number-of-middle-names) (repeatedly (partial rand-nth middle))))
+
+
 (defn generate
   "Generate an infinite sequence of names."
   [last first middle]
-  (repeatedly #(list* (rand-nth last) (rand-nth first)
-                      (take (number-of-middle-names) (repeatedly (partial rand-nth middle))))))
+  (repeatedly #(list* (rand-nth last) (rand-nth first) (middle-names middle))))
 
 
 (defn female-names
@@ -86,6 +90,16 @@
 (defn male-name
   []
   (-> 1 male-names first))
+
+
+(defn male-first-names
+  []
+  (list* (rand-nth (:male/first data/names)) (middle-names (:male/middle data/names))))
+
+
+(defn female-first-names
+  []
+  (list* (rand-nth (:female/first data/names)) (middle-names (:female/middle data/names))))
 
 
 (defn female-name
