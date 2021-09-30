@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>me.flowthing</groupId>
   <artifactId>enne</artifactId>
-  <version>1.0.1</version>
+  <version>1.1.0</version>
   <name>enne</name>
   <build>
     <sourceDirectory>src</sourceDirectory>
@@ -60,7 +60,7 @@
     <dependency>
       <groupId>org.clojure</groupId>
       <artifactId>clojure</artifactId>
-      <version>1.10.1</version>
+      <version>1.10.3</version>
     </dependency>
   </dependencies>
 </project>
