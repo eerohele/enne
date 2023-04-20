@@ -4,7 +4,7 @@
   "repository": "https://github.com/eerohele/enne",
   "description": "A website for Enne, a library for generating random Finns.",
   "dependencies": {
-    "create-react-class": "^15.6.3",
+    "create-react-class": "^15.7.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
